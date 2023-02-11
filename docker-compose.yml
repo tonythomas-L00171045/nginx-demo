@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  showprocess1:
+    image: showprocess:v1
+    hostname: showprocess1
+    container_name: showprocess1
+    ports:
+      - 8004:8000
+    expose:
+      - 8000
+    networks: 
+      - sp_internal
+      
+networks:   
+  sp_internal:
+    driver: bridge

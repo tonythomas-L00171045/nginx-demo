@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aZ3Xuz1C4n4yFXIFoIfATQdfqKy5yA2PuWG0dVCUuwJ0YppyhjAK6AJDLVb4pRo/vHONztQjhDF0uHayfMOHWQ==",
+  "success": true,
+  "projectFilePath": "C:\\atu\\Disruptive\\Lab1\\Projects\\LoadBalancerDemo\\ShowProcessId\\ShowProcessId\\ShowProcessId.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tony\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

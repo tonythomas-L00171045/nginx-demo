@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  ingress:
+    container_name: showprocess-ingress
+    image: showprocess-ingress:latest
+    restart: unless-stopped
+    build: 
+      context: .
+      dockerfile: ingress.Dockerfile
+    ports:
+      - 80:8080
+    networks: 
+      - sp_internal      
+
+  showprocess1:
+    image: showprocess:v1
+    hostname: showprocess1
+    container_name: showprocess1
+    environment:
+      - ProcessId=1001
+    ports:
+      - 8004:8000
+    expose:
+      - 8000
+    networks: 
+      - sp_internal
+      
+  showprocess2:
+    image: showprocess:v1
+    hostname: showprocess2
+    container_name: showprocess2
+    environment:
+      - ProcessId=1002
+    ports:
+      - 8005:8000
+    expose:
+      - 8000
+    networks: 
+      - sp_internal
+      
+networks:   
+  sp_internal:
+    driver: bridge
+    
+    
